@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "product": "NetPass Windows Endpoint Management System (EndpointHub)",
+  "vendor": "NetPass Technologies",
+  "repository": "https://github.com/imviren/NetPass_Windows_EPMS",
+  "current": {
+    "version": "1.0.0",
+    "buildVersion": "26.10.29473.0",
+    "releaseDate": "2026-10-21",
+    "channel": "Stable",
+    "gitTag": "v1.0.0",
+    "status": "ProductionReady",
+    "verificationPassRate": "100% (20/20 Test Battery)",
+    "artifacts": {
+      "server": {
+        "name": "EndpointHub Server Setup",
+        "fileName": "EndpointHubServerSetup.exe",
+        "fileType": "Installer Executable",
+        "version": "1.0.0",
+        "sizeBytes": 69685740,
+        "sizeFormatted": "66.46 MB",
+        "sha256": "009fad7769319c2a7f66ba50748213ce85bcae56e1c7798fc851643553b53983",
+        "downloadUrl": "https://github.com/imviren/NetPass_Windows_EPMS/raw/main/installers/EndpointHubServerSetup.exe",
+        "targetOS": "Windows Server 2019/2022/2025, Windows 10/11 Pro/Enterprise (x64)"
+      },
+      "agent": {
+        "name": "EndpointHub Client Agent",
+        "fileName": "EndpointHubAgent.msi",
+        "fileType": "Windows Installer Package",
+        "version": "1.0.0",
+        "buildVersion": "26.10.29473.0",
+        "sizeBytes": 27643904,
+        "sizeFormatted": "26.36 MB",
+        "sha256": "00750bd3113310c30b03cee99f222c49f0756da3553de79ff961bde70263c649",
+        "downloadUrl": "https://github.com/imviren/NetPass_Windows_EPMS/raw/main/installers/EndpointHubAgent.msi",
+        "targetOS": "Windows 10/11 Pro/Enterprise, Windows Server 2019/2022/2025 (x64)"
+      }
+    }
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "releaseDate": "2026-10-21",
+      "channel": "Stable",
+      "summary": "Initial enterprise release verified across live Hyper-V/VirtualBox VM environment.",
+      "highlights": [
+        "Self-contained ASP.NET Core 9 Windows Service hosting Web API and SignalR hubs",
+        "Single-Page Administrative Web Portal with real-time telemetry and dark mode design system",
+        "Bi-directional SignalR WebSocket agent execution with audited results roundtrip",
+        "Full policy bundle enforcement and dynamic device group assignment",
+        "BitLocker TPM recovery key escrow with audited key access logging",
+        "Disaster recovery backup engine with automated ZIP compression and SQL integrity validation",
+        "Centralized audit logging with formula injection defended CSV export",
+        "Zero-trust mutual TLS (mTLS) agent communication with certificate pinning"
+      ]
+    }
+  ]
+}
