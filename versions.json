@@ -5,21 +5,21 @@
   "repository": "https://github.com/imviren/NetPass_Windows_EPMS",
   "current": {
     "version": "1.0.0",
-    "buildVersion": "26.10.29493.0",
-    "releaseDate": "2026-10-21",
+    "buildVersion": "26.10.29502.0",
+    "releaseDate": "2026-10-22",
     "channel": "Stable",
     "gitTag": "v1.0.0",
     "status": "ProductionReady",
-    "verificationPassRate": "100% (96/96 automated tests + 22/22 live VM capabilities)",
+    "verificationPassRate": "100% (99/99 automated tests + 22/22 live VM capabilities)",
     "artifacts": {
       "server": {
         "name": "EndpointHub Server Setup",
         "fileName": "EndpointHubServerSetup.exe",
         "fileType": "Installer Executable",
         "version": "1.0.0",
-        "sizeBytes": 69720475,
-        "sizeFormatted": "66.49 MB",
-        "sha256": "d9e96e14c4c75aeed38839b736c1e12999c02e23fceb05789edb386b3e3de955",
+        "sizeBytes": 69752895,
+        "sizeFormatted": "66.52 MB",
+        "sha256": "b86c50ef3d7746d66c585762652734b19348a4007c04f49c5cb662bcd030d4e8",
         "downloadUrl": "https://github.com/imviren/NetPass_Windows_EPMS/raw/main/installers/EndpointHubServerSetup.exe",
         "targetOS": "Windows Server 2019/2022/2025, Windows 10/11 Pro/Enterprise (x64)"
       },
@@ -28,10 +28,10 @@
         "fileName": "EndpointHubAgent.msi",
         "fileType": "Windows Installer Package",
         "version": "1.0.0",
-        "buildVersion": "26.10.29493.0",
-        "sizeBytes": 27643904,
-        "sizeFormatted": "26.36 MB",
-        "sha256": "6b8c2153a3398a8db00ac611a2a69a1d625036155c17c89d8b5b807151bb0e32",
+        "buildVersion": "26.10.29502.0",
+        "sizeBytes": 27660288,
+        "sizeFormatted": "26.38 MB",
+        "sha256": "f40c2ab4c8c574d4af1f5e2a289b4afebedd56656b15661ba8b673b1dd58e02c",
         "downloadUrl": "https://github.com/imviren/NetPass_Windows_EPMS/raw/main/installers/EndpointHubAgent.msi",
         "targetOS": "Windows 10/11 Pro/Enterprise, Windows Server 2019/2022/2025 (x64)"
       }

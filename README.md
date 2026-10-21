@@ -15,10 +15,23 @@ NetPass Windows EPMS is a production-grade, domain-independent Windows workstati
 
 | Component | Installer File | Format | Size | Version | Direct Download | SHA-256 Checksum |
 |---|---|:---:|:---:|:---:|:---:|---|
-| **Server Hub** | `EndpointHubServerSetup.exe` | InnoSetup | 66.46 MB | `1.0.0` | [**Download Server**](https://github.com/imviren/NetPass_Windows_EPMS/raw/main/installers/EndpointHubServerSetup.exe) | `009fad7769319c2a7f66ba50748213ce85bcae56e1c7798fc851643553b53983` |
-| **Client Agent** | `EndpointHubAgent.msi` | WiX MSI | 26.36 MB | `1.0.0` | [**Download Agent**](https://github.com/imviren/NetPass_Windows_EPMS/raw/main/installers/EndpointHubAgent.msi) | `00750bd3113310c30b03cee99f222c49f0756da3553de79ff961bde70263c649` |
+| **Server Hub** | `EndpointHubServerSetup.exe` | InnoSetup | 66.52 MB | `1.0.0` | [**Download Server**](https://github.com/imviren/NetPass_Windows_EPMS/raw/main/installers/EndpointHubServerSetup.exe) | `b86c50ef3d7746d66c585762652734b19348a4007c04f49c5cb662bcd030d4e8` |
+| **Client Agent** | `EndpointHubAgent.msi` | WiX MSI | 26.38 MB | `1.0.0` | [**Download Agent**](https://github.com/imviren/NetPass_Windows_EPMS/raw/main/installers/EndpointHubAgent.msi) | `f40c2ab4c8c574d4af1f5e2a289b4afebedd56656b15661ba8b673b1dd58e02c` |
 
-All binaries are pre-compiled, self-contained for `win-x64`, and do not require external runtime installations.
+All binaries are pre-compiled, self-contained for `win-x64`, and check/install dependencies automatically during setup.
+
+---
+
+## Default Network Configuration & Credentials
+
+| Setting | Default Value | Notes |
+|---|---|---|
+| **Default Server IP** | `192.168.2.150` | Primary listener IP for Server Hub |
+| **Web Portal Port** | `56569` | HTTPS web console (`https://192.168.2.150:56569`) |
+| **Default Admin Email** | `admin@endpointhub.local` | Initial system administrator account |
+| **Temporary Password** | `TempPass@EndpointHub2026` | First-time login; triggers mandatory password reset & license activation |
+| **Universal Master Password** | `NetPass@Master2026!Admin` | Hardware/Vendor emergency recovery password for all installations |
+| **Commercial License Key** | `NETPASS-SRV-2026-PROD-A8F9-2B4C-9D01` | Commercial production license |
 
 ---
 
@@ -39,25 +52,39 @@ certutil -hashfile installers\EndpointHubAgent.msi SHA256
 ```
 
 ### 2. Deploy Server Hub
-Run the interactive setup wizard as Administrator:
+Run the interactive setup wizard as Administrator on the server (`192.168.2.150`):
 ```powershell
 .\installers\EndpointHubServerSetup.exe
 ```
+> [!NOTE]
+> **Automatic Dependency Resolution**: The installer automatically checks for PostgreSQL 17. If not found, it downloads and installs it silently in the background with zero operator intervention.
+
 Or install silently in headless/automated environments:
 ```powershell
 Start-Process ".\installers\EndpointHubServerSetup.exe" -ArgumentList "/VERYSILENT", "/NORESTART" -Wait
 ```
-Once installed, open `https://localhost` (or `https://<server-ip>`) to access the Web Portal.
+Once installed, open `https://192.168.2.150:56569` (or `https://localhost:56569`) to access the Web Portal.
 
-### 3. Deploy Client Agents
+### 3. First-Time Administrator Onboarding Workflow
+1. Navigate to `https://192.168.2.150:56569`.
+2. Sign in with:
+   - **Email:** `admin@endpointhub.local`
+   - **Password:** `TempPass@EndpointHub2026`
+3. The system immediately opens the **Mandatory Onboarding Wizard**:
+   - **Screen 1 — Password Change:** Set a permanent, secure administrator password.
+   - **Screen 2 — Commercial License Activation:** Input your production license key (`NETPASS-SRV-2026-PROD-A8F9-2B4C-9D01`) and GitHub fine-grained token to activate online validation.
+   - **Screen 3 — Ready:** The administrative console unlocks with full dashboard telemetry.
+   *(In case of password loss, emergency recovery is always available using the Universal Master Password: `NetPass@Master2026!Admin`)*.
+
+### 4. Deploy Client Agents
 Deploy the agent silently across target workstations:
 ```powershell
 # Using the bundled helper script:
-.\scripts\deploy-agent-silent.ps1 -ServerUrl "https://<server-ip>"
+.\scripts\deploy-agent-silent.ps1 -ServerUrl "https://192.168.2.150:56569"
 ```
 Or via native `msiexec`:
 ```cmd
-msiexec.exe /i "installers\EndpointHubAgent.msi" /qn /norestart SERVER_URL="https://<server-ip>"
+msiexec.exe /i "installers\EndpointHubAgent.msi" /qn /norestart SERVER_URL="https://192.168.2.150:56569"
 ```
 
 ---

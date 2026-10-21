@@ -1,5 +1,6 @@
 # NetPass Windows EPMS Official Release Checksums (SHA-256)
-# Generated: 2026-10-21 17:50:38 UTC
+# Generated: 2026-10-21 19:05:47 UTC
 
-6b8c2153a3398a8db00ac611a2a69a1d625036155c17c89d8b5b807151bb0e32  EndpointHubAgent.msi
-d9e96e14c4c75aeed38839b736c1e12999c02e23fceb05789edb386b3e3de955  EndpointHubServerSetup.exe
+f40c2ab4c8c574d4af1f5e2a289b4afebedd56656b15661ba8b673b1dd58e02c  EndpointHubAgent.msi
+b86c50ef3d7746d66c585762652734b19348a4007c04f49c5cb662bcd030d4e8  EndpointHubServerSetup.exe
+
