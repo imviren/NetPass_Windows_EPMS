@@ -17,9 +17,9 @@
         "fileName": "EndpointHubServerSetup.exe",
         "fileType": "Installer Executable",
         "version": "1.0.0",
-        "sizeBytes": 69685740,
-        "sizeFormatted": "66.46 MB",
-        "sha256": "009fad7769319c2a7f66ba50748213ce85bcae56e1c7798fc851643553b53983",
+        "sizeBytes": 69719709,
+        "sizeFormatted": "66.49 MB",
+        "sha256": "e21a7cae16dc9bb87b4b46577d9661751528cbbd403fc4bfa6d89abd21f1332a",
         "downloadUrl": "https://github.com/imviren/NetPass_Windows_EPMS/raw/main/installers/EndpointHubServerSetup.exe",
         "targetOS": "Windows Server 2019/2022/2025, Windows 10/11 Pro/Enterprise (x64)"
       },
@@ -29,9 +29,9 @@
         "fileType": "Windows Installer Package",
         "version": "1.0.0",
         "buildVersion": "26.10.29473.0",
-        "sizeBytes": 27643904,
-        "sizeFormatted": "26.36 MB",
-        "sha256": "00750bd3113310c30b03cee99f222c49f0756da3553de79ff961bde70263c649",
+        "sizeBytes": 27648000,
+        "sizeFormatted": "26.37 MB",
+        "sha256": "2de58cbcd0e64a1265edb78029e9800a681e16749baefae66a8494d0498db362",
         "downloadUrl": "https://github.com/imviren/NetPass_Windows_EPMS/raw/main/installers/EndpointHubAgent.msi",
         "targetOS": "Windows 10/11 Pro/Enterprise, Windows Server 2019/2022/2025 (x64)"
       }

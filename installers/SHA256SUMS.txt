@@ -1,7 +1,5 @@
-# NetPass Windows EPMS (EndpointHub) SHA-256 Checksums
-# Generated on: 2026-10-21 14:17:45 UTC
-# Verify with: certutil -hashfile <filename> SHA256
-# Or PowerShell: Get-FileHash <filename> -Algorithm SHA256
+# NetPass Windows EPMS Official Release Checksums (SHA-256)
+# Generated: 2026-10-21 16:51:33 UTC
 
-009fad7769319c2a7f66ba50748213ce85bcae56e1c7798fc851643553b53983  EndpointHubServerSetup.exe
-00750bd3113310c30b03cee99f222c49f0756da3553de79ff961bde70263c649  EndpointHubAgent.msi
+2de58cbcd0e64a1265edb78029e9800a681e16749baefae66a8494d0498db362  EndpointHubAgent.msi
+e21a7cae16dc9bb87b4b46577d9661751528cbbd403fc4bfa6d89abd21f1332a  EndpointHubServerSetup.exe
