@@ -125,6 +125,7 @@ NetPass EPMS provides a machine-readable version manifest at [`versions.json`](v
 
 - [**Server Installation Guide**](docs/SERVER_INSTALLATION_GUIDE.md) — Comprehensive setup, firewall, and certificate instructions.
 - [**Agent Deployment Guide**](docs/AGENT_DEPLOYMENT_GUIDE.md) — Silent GPO, Intune, MECM, and PowerShell rollouts.
+- [**Update Management & Rollout Plan**](docs/UPDATE_MANAGEMENT_PLAN.md) — Phased deployment rings, BITS throttling, and watchdog auto-rollback.
 - [**Master Restriction Catalogue**](docs/RESTRICTION_CATALOGUE.md) — Master catalogue of endpoint restrictions and enforcement rules.
 - [**Full Verification Report**](docs/VERIFICATION_REPORT.md) — Full-system test results and live VM audit evidence (20/20 test battery).
 - [**Administrator Guide (PDF)**](docs/EndpointHub_Administrator_Guide.pdf) — Complete operator manual.
